@@ -129,7 +129,7 @@ class CPU:
                     break
         if self.counters == 0:
             self.standard_counters = "0,1,2,3"
-            if self.cpu == "slm":
+            if self.cpu in ("slm", "knl"):
                 self.counters = 2
                 self.standard_counters = "0,1"
             # when running in a hypervisor always assume worst case HT in on
